@@ -1,0 +1,10 @@
+{
+  "name": "okapi - Beautifully, simple application tool kit.",
+  "workspaces": [
+    "ui-common-form"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "np": "^7.5.0"
+  }
+}
