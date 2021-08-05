@@ -1,0 +1,56 @@
+{
+  "name": "@mscherzer/ui-demo",
+  "description": "OKApi - The collaborative UI for UX Designers and Developers. This package showcase all components.",
+  "author": "Marcel Scherzer",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/quicken/okapi",
+  "bugs": {
+    "url": "https://github.com/quicken/okapi/issues"
+  },
+  "keywords": [
+    "UX-Design"
+  ],
+  "version": "0.0.1",
+  "private": false,
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "react-scripts": "^4.0.3",
+    "typescript": "^4.3.5",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.4.11",
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
