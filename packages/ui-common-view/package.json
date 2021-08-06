@@ -1,0 +1,39 @@
+{
+  "name": "@mscherzer/ui-common-view",
+  "description": "OKApi - The collaborative UI for UX Designers and Developers. This package showcase all components.",
+  "author": "Marcel Scherzer",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/quicken/okapi",
+  "bugs": {
+    "url": "https://github.com/quicken/okapi/issues"
+  },
+  "keywords": [
+    "UX-Design"
+  ],
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "source-map-loader": "^2.0.1"
+  },
+  "devDependencies": {
+    "ts-loader": "^8.0.0",
+    "typescript": "^4.2.2"
+  },
+  "scripts": {
+    "build": "gulp build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  }
+}
