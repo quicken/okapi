@@ -1,12 +1,8 @@
 {
-  "name": "okapi - Beautifully, simple application tool kit.",
+  "name": "@mscherzer/okapi-kit",
+  "version": "0.0.1",
+  "private": true,
   "workspaces": [
-    "ui-common-form",
-    "ui-common-view",
-    "ui-demo"
-  ],
-  "dependencies": {},
-  "devDependencies": {
-    "np": "^7.5.0"
-  }
+    "packages/**/*"
+  ]
 }
