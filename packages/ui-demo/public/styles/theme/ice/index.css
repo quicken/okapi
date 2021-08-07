@@ -1,0 +1,16 @@
+/* OKApi Layout*/
+@import "../../reset.css";
+@import "../../okapi/component/Select.css";
+@import "../../okapi/component/DatePicker.css";
+@import "../../okapi/form.css";
+@import "../../okapi/view.css";
+
+/* Ice Theme */
+@import "./fonts.css";
+
+h1 {
+  color: burlywood;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 60px;
+}
