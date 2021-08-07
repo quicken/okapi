@@ -14,8 +14,8 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "@mscherzer/ui-common-view": "^0.0.1",
     "@mscherzer/ui-common-form": "^0.0.1",
+    "@mscherzer/ui-common-view": "^0.0.1",
     "@mscherzer/ui-component-datepicker": "^0.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -29,6 +29,10 @@
     "@types/node": "^16.4.11",
     "@types/react": "^17.0.15",
     "@types/react-dom": "^17.0.9",
+    "clean-css": "^5.1.5",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-rename": "^2.0.0",
     "react-scripts": "^4.0.3",
     "typescript": "^4.3.5"
   },
@@ -36,7 +40,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "css": "gulp minify-css"
   },
   "eslintConfig": {
     "extends": [
