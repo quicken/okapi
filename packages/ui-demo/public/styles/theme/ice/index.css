@@ -2,11 +2,11 @@
 @import "../../reset.css";
 @import "../../okapi/component/Select.css";
 @import "../../okapi/component/DatePicker.css";
-@import "../../okapi/form.css";
-@import "../../okapi/view.css";
+@import "../../okapi/form/index.css";
+@import "../../okapi/view/index.css";
 
 /* Ice Theme */
-@import "./fonts.css";
+@import "./fonts/index.css";
 
 h1 {
   color: burlywood;
