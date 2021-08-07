@@ -1,0 +1,127 @@
+.alert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid #c9c9c9;
+  border-radius: 3px;
+  background-color: rgb(236, 236, 236);
+  max-width: 700px;
+}
+
+.alert > div {
+  display: flex;
+  align-items: center;
+}
+
+.alert .icon {
+  display: none;
+  min-height: 48px;
+  height: 48px;
+  width: 48px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.alert .txt {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 5px;
+  color: #4e4e4e;
+  font-family: roboto;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.alert button {
+  min-width: 60px;
+  font-weight: 600;
+  height: 25px;
+}
+
+.alert.error {
+  border-color: #ad1313;
+  background-color: #db4040;
+}
+
+.alert.error .txt {
+  color: #ffd3d3;
+}
+
+.alert.error .icon {
+  display: inline-block;
+  background-color: #db4040;
+  background-image: url("/tux/gfx/global/component/ic_error_outline_black_36dp.png");
+  background-blend-mode: overlay;
+}
+
+.alert.error button {
+  color: #530b0b;
+  border-color: #ad1313;
+  background-color: #ffd3d3;
+}
+.alert.error button:hover {
+  background-color: #fae8e8;
+}
+
+.alert.error button:active {
+  background-color: #f8f8f8;
+}
+
+.alert.success {
+  border-color: #338f1c;
+  background-color: #f1fdec;
+}
+
+.alert.success .txt {
+  color: #30462a;
+}
+
+.alert.success .icon {
+  display: inline-block;
+  background-color: #f1fdec;
+  background-image: url("/tux/gfx/global/component/ic_done_green_36dp.png");
+}
+
+.alert.success button {
+  color: #073b05;
+  border-color: #7fc285;
+  background-color: #b7ffc9;
+}
+.alert.success button:hover {
+  background-color: #dbf8e2;
+}
+
+.alert.success button:active {
+  background-color: #f8f8f8;
+}
+
+.alert.warning {
+  border-color: #ffe70e;
+  background-color: #f8faa5;
+}
+
+.alert.warning .txt {
+  color: #30462a;
+}
+
+.alert.warning .icon {
+  display: inline-block;
+  background-color: #f1fdec;
+  background-image: url("/tux/gfx/global/component/baseline_priority_36dp.png");
+}
+
+.alert.warning button {
+  color: #ff970e;
+  border-color: #ffe70e;
+  background-color: #f8f8f8;
+}
+.alert.warning button:hover {
+  background-color: #dbf8e2;
+}
+
+.alert.warning button:active {
+  background-color: #f8f8f8;
+}

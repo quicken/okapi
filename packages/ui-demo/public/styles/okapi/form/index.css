@@ -1,1 +1,181 @@
-@import "./form/ActionButton.css";
+@import "./ActionButton.css";
+@import "./CheckBox.css";
+@import "./Input.css";
+@import "./Select.css";
+@import "./Switch.css";
+@import "./TextArea.css";
+@import "./TileButton.css";
+
+/* Utility Styles */
+.icon {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background-position: center;
+  background-size: 36px 36px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.wrap {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* field helper styles.*/
+input,
+select,
+.field span.value,
+.field .symbol,
+.cfkit__value-container--has-value {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: rgb(99, 99, 99);
+}
+
+.field label {
+  margin-bottom: 3px;
+  font-size: 12px;
+  color: #5e5e5e;
+}
+
+.field input,
+.field select,
+.field span.value {
+  font-size: 13px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.field span.value.placeholder {
+  color: #aaa;
+  font-weight: 300;
+}
+
+.field select {
+  background: rgb(253, 253, 253);
+  border-color: rgb(210, 210, 210);
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.field.readonly span.value {
+  cursor: default;
+}
+
+.field_group {
+  display: inline-flex;
+  margin: 0px;
+  padding: 0px;
+}
+
+.field_group {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.field_group .field {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.field_group .field:last-child {
+  margin-right: 0;
+}
+
+.field {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0 5px 5px 0;
+}
+
+.field:last-child {
+  margin-right: 0;
+}
+
+/*
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Tier 0 - form fields
+*/
+/* react-select */
+
+/* react-date-picker */
+
+/*
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Button */
+button,
+input[type="button"],
+input[type="submit"] {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px;
+  padding-right: 8px;
+  padding-left: 8px;
+  margin: 5px;
+  height: 35px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  color: #3d3d3d;
+  border: 1px solid rgb(202, 202, 202);
+  border-radius: 5px;
+  background-color: rgb(224, 224, 224);
+  transition: 0.2s;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  border-color: #4fc285;
+  background-color: #7fc285;
+  color: #2f2f2f;
+  transition: 0.2s;
+}
+
+button:active,
+input[type="button"]:active,
+input[type="submit"]:active {
+  color: rgb(0, 0, 0);
+  background-color: rgb(222, 226, 230);
+  border-color: rgb(185, 187, 199);
+  transition: 0s;
+}
+
+/*
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Tier 4 - Fields inside a proper form.*/
+.input_form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(250, 250, 250);
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 25px;
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 5px;
+}
+
+.input_form .field {
+  height: 100%;
+  max-height: 56px;
+  margin-top: 5px;
+}
+
+.input_form .field.input_address,
+.input_form .field.address {
+  max-height: none;
+}

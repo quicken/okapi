@@ -1,0 +1,40 @@
+.modal_page,
+.modal_skin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 50;
+}
+
+.modal_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal_skin {
+  background-color: #9e9e9e;
+  opacity: 0.6;
+}
+
+/*
+Removed this on behest of Users
+background-image: url("/tux/gfx/global/spinner_cog_blue.svg");
+*/
+.modal_page > div.working > .spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 250px;
+  width: 250px;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  color: #2e2e2e;
+  font-weight: 600;
+}

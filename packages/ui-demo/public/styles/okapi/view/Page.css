@@ -1,0 +1,44 @@
+.cfkit_react_page {
+  display: flex;
+  flex-direction: column;
+}
+
+.cfkit_react_page > article {
+  background-color: aliceblue;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.cfkit_react_page.empty > article {
+  background-color: initial;
+  border: none;
+  padding: 10px 0 0 0;
+}
+
+.cfkit_react_page.col article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: initial;
+  border: none;
+  padding: 10px 0 0 0;
+}
+
+.cfkit_react_page.col article > .cfkit_card,
+.cfkit_react_page.col article > .cfkit_card_layout,
+.cfkit_react_page.col article > div.grid {
+  margin-left: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cfkit_react_page.col article > .cfkit_card:nth-child(1),
+.cfkit_react_page.col article > .cfkit_card_layout:nth-child(1),
+.cfkit_react_page.col article > div.grid:nth-child(1) {
+  margin-left: 0;
+  margin-right: 10px;
+  width: 550px;
+}

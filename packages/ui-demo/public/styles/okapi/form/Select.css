@@ -1,0 +1,55 @@
+.field select {
+  border: 1px solid rgb(210, 210, 210);
+  background-color: #ffffff;
+  padding: 3px;
+  height: 100%;
+}
+
+/*  ---------------------i--------------
+Ensure the choosen option fields expand to fit content and do not wrap. allows options to lie outside of table cells. */
+.cfkit__menu {
+  width: fit-content !important;
+  width: -moz-fit-content !important;
+  overflow-x: hidden !important;
+  min-width: 100%;
+}
+
+.cfkit__menu-list {
+  width: fit-content !important;
+  width: -moz-fit-content !important;
+  overflow-x: hidden !important;
+  min-width: 100%;
+}
+
+.cfkit__option {
+  white-space: nowrap;
+}
+/*  ----------------------------------- */
+
+.field.choosen .cfkit__dropdown-indicator {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 3px !important;
+  padding-right: 3px !important;
+}
+
+/* Force react choosen to be the same size as other cfkit common form components. */
+.field.choosen .cfkit__control {
+  min-height: 31px;
+}
+
+.field.choosen .cfkit__value-container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.field.choosen .cfkit__single-value {
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 15px;
+}
+
+.field.choosen .cfkit__indicator-separator {
+  margin-top: 0;
+  margin-bottom: 0;
+}

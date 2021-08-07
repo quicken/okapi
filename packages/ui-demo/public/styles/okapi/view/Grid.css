@@ -1,0 +1,184 @@
+/*
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Grid
+*/
+table.grid {
+  width: 100%;
+  border-collapse: separate;
+  border-left: #eee;
+  border-right: #eee;
+  border-bottom: 2px solid #eee;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+table.grid td button.tileButton {
+  padding: 0;
+  margin: 0;
+  height: 24px;
+  width: 24px;
+  margin-right: 4px;
+}
+
+table.grid td button.tileButton:last-child {
+  margin-right: 0;
+}
+
+table.grid td button.tile {
+  padding: 0;
+  margin: 0;
+  height: 24px;
+  width: 24px;
+  margin-right: 4px;
+}
+
+table.grid td button.tile:last-child {
+  margin-right: 0;
+}
+
+table.grid thead td {
+  background-color: rgb(44, 161, 233);
+  height: 35px;
+  color: whitesmoke;
+  vertical-align: middle;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  padding: 0px 5px 0px 5px;
+}
+
+table.grid thead td:first-child {
+  border-left: 1px solid #2ca1e9;
+  border-top-left-radius: 5px;
+  padding-left: 12px;
+}
+
+table.grid thead td:last-child {
+  border-right: 1px solid #2ca1e9;
+  border-top-right-radius: 5px;
+  padding-right: 12px;
+}
+
+table.grid tbody td {
+  color: black;
+  word-break: break-all;
+  border-right: 1px solid rgb(231, 231, 231);
+  padding: 3px 5px 3px 5px;
+  vertical-align: middle;
+  font-size: 13px;
+  min-height: 25px;
+}
+
+table.grid tbody tr:nth-child(even) td {
+  background-color: #f7f7f7;
+}
+
+table.grid tbody tr:nth-child(odd) td {
+  background-color: #ffffff;
+}
+
+table.grid tbody td:first-child {
+  padding-left: 9px;
+  border-left: 1px solid rgb(231, 231, 231);
+}
+
+table.grid tbody td:last-child {
+  padding-right: 9px;
+  border-right: 1px solid rgb(231, 231, 231);
+}
+
+table.grid.picker thead td:first-child {
+  width: 38px;
+  padding: 0;
+  text-align: center;
+}
+
+table.grid tbody td a,
+table.grid tbody td a:visited {
+  color: #2568a8;
+}
+
+table.grid tbody td a:hover {
+  color: rgb(44, 143, 77);
+}
+
+/*
+  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+  Grid Pager
+  */
+ul.grid_pager > li:first-child,
+ul.grid_pager > li:last-child {
+  font-size: 18px;
+  color: #5e5e5e;
+}
+
+ul.grid_pager > li.disabled {
+  color: #ccc;
+}
+
+ul.grid_pager > li.active {
+  color: #166ea9;
+  font-weight: 600;
+}
+
+/*
+  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+  Grid Bar
+  */
+div.grid_bar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 3px 0 3px 0;
+  margin-bottom: 5px;
+}
+
+div.grid_bar.bottom {
+  margin-top: 5px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+div.grid_bar .field {
+  width: auto;
+  margin: 0;
+}
+
+div.grid_bar .field.choosen {
+  min-width: 80px;
+}
+
+div.grid_bar > .group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+div.grid_bar ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  margin: 0 15px 0 0;
+}
+
+div.grid_bar li {
+  display: block;
+  padding: 0 0 0 15px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  color: #8e8e8e;
+}
+
+div.grid_bar li:hover {
+  cursor: pointer;
+}
+
+div.grid_bar li.disabled:hover {
+  cursor: default;
+}

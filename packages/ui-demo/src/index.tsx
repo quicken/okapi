@@ -22,7 +22,7 @@ export const Application: FunctionComponent<ApplicationProps> = (props) => {
         <Page>
           Hello World
           <ActionButton
-            type="empty"
+            type="save"
             onClick={(e: any) => console.log("Hello World.")}
           >
             Click me

@@ -1,0 +1,76 @@
+.field input {
+  border: 1px solid rgb(210, 210, 210);
+  background-color: #ffffff;
+  padding: 3px;
+  height: 100%;
+}
+
+.field input {
+  background: rgb(253, 253, 253);
+  border-color: rgb(210, 210, 210);
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.field input:focus {
+  background: white;
+  border-color: rgb(154, 197, 238);
+  color: black;
+  padding: 5px;
+}
+
+/* Money and Percent Input component */
+.field.money span.value,
+.field.percent span.value {
+  white-space: nowrap;
+  text-align: right;
+}
+
+.field.money input,
+.field.money input:focus {
+  padding-left: 18px;
+  text-align: right;
+}
+
+.field.money .symbol {
+  position: absolute;
+  top: 7px;
+  left: 4px;
+  font-size: 16px;
+  width: 17px;
+}
+
+.field.money3 span.value {
+  white-space: nowrap;
+  text-align: right;
+}
+
+.field.money3 input,
+.field.money3 input:focus {
+  padding-left: 18px;
+  text-align: right;
+}
+
+.field.money3 .symbol {
+  position: absolute;
+  top: 7px;
+  left: 4px;
+  font-size: 16px;
+  width: 17px;
+}
+
+.field.percent input,
+.field.percent input:focus {
+  padding-right: 26px;
+  text-align: right;
+}
+
+.field.percent .symbol {
+  position: absolute;
+  top: 8px;
+  left: auto;
+  right: 1px;
+  font-size: 17px;
+  width: 20px;
+}

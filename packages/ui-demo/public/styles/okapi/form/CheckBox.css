@@ -1,0 +1,38 @@
+.checkbox {
+  display: inline-flex;
+  height: 25px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.checkbox > div.box {
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-shrink: 0;
+}
+
+.checkbox > input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  visibility: hidden;
+}
+
+.checkbox label {
+  cursor: pointer;
+  margin-left: 10px;
+  color: #696969;
+}
+
+.checkbox > div.box {
+  background-image: url("/tux/gfx/global/component/ic_outline_check_box_outline_blank_gray_36dp.png");
+}
+
+.checkbox > div.box.on {
+  background-image: url("/tux/gfx/global/component/ic_outline_check_box_gray_36dp.png");
+}

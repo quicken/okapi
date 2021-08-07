@@ -1,0 +1,57 @@
+.actionButton span.icon {
+  display: none;
+}
+
+.actionButton.save {
+  width: 90px;
+}
+
+.actionButton.save span.icon {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  background-size: contain;
+  background-image: url("./actionButton/ic_outline_save_gray_36dp.png");
+}
+
+.actionButton.create span.icon {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-right: 2px;
+  background-size: contain;
+  background-image: url("./actionButton/ic_outline_add_gray_36dp.png");
+}
+
+.actionButton.search span.icon {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  background-size: contain;
+  background-image: url("./actionButton/ic_outline_search_gray_36dp.png");
+}
+
+.actionButton.print span.icon {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  background-size: contain;
+  background-image: url("./actionButton/ic_outline_print_gray_36dp.png");
+}
+
+.actionButton.cancel:hover {
+  background-color: rgb(235, 75, 75);
+  border-color: rgb(204, 0, 0);
+}
+
+.actionButton.cancel span.icon {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  background-size: contain;
+  background-image: url("./actionButton/ic_outline_clear_black_36dp.png");
+}

@@ -1,0 +1,39 @@
+.textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #3e3e3e;
+  font-size: 13px;
+  box-sizing: border-box;
+  min-height: 80px;
+  margin-top: 6px;
+}
+
+.textarea > textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid rgb(210, 210, 210);
+  background-color: #ffffff;
+  box-sizing: border-box;
+  min-height: 80px;
+}
+
+.textarea > textarea:focus {
+  border-color: rgb(154, 197, 238);
+  color: black;
+}
+
+.textarea > span.value {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  min-height: 82px;
+  padding: 10px;
+  white-space: pre-line;
+  box-sizing: border-box;
+}

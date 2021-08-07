@@ -1,0 +1,92 @@
+button.tileButton,
+div.tileButton {
+  width: 31px;
+  height: 31px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  cursor: pointer;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+button.tileButton:hover,
+div.tileButton:hover {
+  background-color: #7fc285;
+}
+
+button.tileButton.grid {
+  background-image: url("/tux/gfx/global/component/ic_baseline_view_list_gray_24dp.png");
+}
+
+button.tileButton.create {
+  background-image: url("/tux/gfx/global/component/ic_outline_add_gray_36dp.png");
+}
+
+button.tileButton.edit {
+  background-image: url("/tux/gfx/global/component/ic_outline_create_gray_36dp.png");
+}
+
+button.tileButton.volume {
+  background-image: url("/tux/gfx/global/component/ic_baseline_local_shipping_gray_36dp.png");
+}
+
+button.tileButton.delete {
+  background-image: url("/tux/gfx/global/component/ic_outline_delete_forever_gray_36dp.png");
+}
+
+button.tileButton.calculate {
+  background-image: url("/tux/gfx/global/component/outline_calculate_black_24dp.png");
+}
+
+button.tileButton.delete:hover {
+  border-color: rgb(204, 0, 0);
+  background-color: rgb(235, 75, 75);
+}
+
+button.tileButton.clone {
+  background-image: url("/tux/gfx/global/component/ic_outline_file_copy_gray_36dp.png");
+}
+
+div.tileButton.lock {
+  background-image: url("/tux/gfx/global/component/ic_outline_https_black_24dp.png");
+}
+
+div.tileButton.lock:hover {
+  border-color: inherit;
+  background-color: inherit;
+  cursor: default;
+}
+
+/*
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Tile */
+button.tile,
+div.tile {
+  width: 31px;
+  height: 31px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  cursor: pointer;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+button.tile:hover,
+div.tile:hover {
+  background-color: #7fc285;
+}
+
+button.tile.delete:hover,
+div.tile.delete:hover {
+  background-color: rgb(235, 75, 75);
+}
+
+button.tile.edit {
+  background-image: url("/tux/gfx/global/component/ic_outline_create_gray_36dp.png");
+}
+
+button.tile.delete {
+  background-image: url("/tux/gfx/global/component/ic_outline_delete_forever_gray_36dp.png");
+}
