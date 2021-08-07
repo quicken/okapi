@@ -1,0 +1,118 @@
+/*
+  --nav-seperator-color:
+  --nav-border-color:
+  --nav-bgcolor:
+  --nav-hover-color:
+  --nav-hover-bgcolor:
+  --nav-color:
+  --nav-title-hover:
+*/
+
+nav {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+  border-bottom: 1px solid var(--nav-border-color, #0a73aa);
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+nav ul li {
+  cursor: pointer;
+}
+
+nav ul li.active span {
+  font-weight: bold;
+}
+
+nav ul li span a {
+  padding: 0px;
+}
+
+nav ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: var(--nav-color, #e8e8e8);
+  text-decoration: none;
+  padding: 10px;
+
+  box-sizing: border-box;
+}
+
+nav ul li a:hover,
+nav ul li span:hover {
+  color: var(--nav-title-hover, #fffed5);
+  text-decoration: none;
+  transition: color 0.2s ease-in;
+}
+
+/* Main Menu Root Items */
+nav > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 70px;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+nav > ul > li {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  padding-bottom: 10px;
+}
+
+nav > ul > li {
+  border: none;
+}
+
+/* Main Menu Sub Menu Items */
+nav > ul > li ul {
+  position: absolute;
+  top: 24px;
+  left: 0px;
+  background: var(--nav-bgcolor, #2b66a8);
+  visibility: hidden;
+  min-width: 200px;
+  border: 1px solid var(--nav-border-color, #0a73aa);
+  border-top-color: var(--nav-border-color, #0a73aa);
+  opacity: 0;
+}
+
+nav > ul > li ul li {
+  border-top: 1px solid var(--nav-seperator-color, #0a73aa);
+}
+
+nav > ul > li.expand ul {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.7s;
+}
+
+nav > ul > li:hover ul li:hover,
+nav > ul > li:hover ul li:hover a {
+  background: var(--nav-hover-bgcolor, #f7f7f7);
+  color: var(--nav-hover-color, #085392);
+}
+
+nav .indicator {
+  position: absolute;
+  top: -16px;
+  left: 0px;
+  width: 16px;
+  border: none;
+  pointer-events: none;
+}
+
+nav .indicator > div {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url("./navigationBar/arrow_up.png");
+  background-size: contain;
+}

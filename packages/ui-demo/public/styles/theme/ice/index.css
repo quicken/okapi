@@ -7,3 +7,15 @@
 
 /* Ice Theme */
 @import "./fonts/index.css";
+
+:root {
+  /*
+  --nav-seperator-color: yellow;
+  --nav-border-color: red;
+  --nav-bgcolor: green;
+  --nav-hover-color: pink;
+  --nav-hover-bgcolor: cyan;
+  --nav-color: orange;
+  --nav-title-hover: orange;
+  */
+}
