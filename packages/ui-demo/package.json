@@ -14,8 +14,9 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "@mscherzer/ui-common-form": "^0.0.1",
     "@mscherzer/ui-common-view": "^0.0.1",
+    "@mscherzer/ui-common-form": "^0.0.1",
+    "@mscherzer/ui-component-datepicker": "^0.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "web-vitals": "^1.0.1"

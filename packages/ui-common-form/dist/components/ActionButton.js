@@ -19,9 +19,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var React = __importStar(require("react"));
+const React = __importStar(require("react"));
 function ActionButton(props) {
-    return (React.createElement("button", { className: "actionButton " + props.type, onClick: props.onClick },
+    return (React.createElement("button", { className: `actionButton ${props.type}`, onClick: props.onClick },
         React.createElement("span", { className: "icon" }),
         React.createElement("span", null, props.children)));
 }

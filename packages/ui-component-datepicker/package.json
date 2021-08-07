@@ -1,6 +1,6 @@
 {
-  "name": "@mscherzer/ui-common-view",
-  "description": "OKApi - The collaborative UI for UX Designers and Developers. This package showcase all components.",
+  "name": "@mscherzer/ui-component-datepicker",
+  "description": "OKApi - The collaborative UI for UX Designers and Developers. This package wraps the react-datepicker.",
   "author": "Marcel Scherzer",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,6 +8,10 @@
   "homepage": "https://github.com/quicken/okapi",
   "bugs": {
     "url": "https://github.com/quicken/okapi/issues"
+  },
+  "repository": {
+    "url": "https://github.com/quicken/okapi",
+    "type": "git"
   },
   "keywords": [
     "UX-Design"
@@ -17,6 +21,7 @@
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-datepicker": "^3.6.0",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1"
   },

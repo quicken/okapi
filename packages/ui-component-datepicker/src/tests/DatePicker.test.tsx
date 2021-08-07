@@ -5,7 +5,7 @@ import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 Enzyme.configure({ adapter: new Adapter() });
 
 import * as React from "react";
-import ActionBar from "../components/ActionBar";
+import DatePicker from "../index";
 
 let wrapper: any;
 
@@ -16,6 +16,12 @@ afterEach(() => {
 });
 
 test("basic render", () => {
-  wrapper = mount(<ActionBar></ActionBar>);
-  //expect(wrapper.exists(".icon")).toBe(true);
+  wrapper = mount(
+    <DatePicker
+      onChange={(name: string, value: Date, data?: any) => {
+        console.log(name, value, data);
+      }}
+    ></DatePicker>
+  );
+  expect(wrapper.exists(".date_picker")).toBe(true);
 });

@@ -348,3 +348,6 @@ MigrationBackup/
 
 # Ignore per project yarn files
 .yarn/
+
+# Ignore distribution folders.
+dist/
