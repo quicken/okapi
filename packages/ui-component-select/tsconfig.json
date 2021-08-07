@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist",
+		"target": "es2017",
+		"module": "commonjs",
+		"noImplicitAny": false,
+		"removeComments": true,
+		"sourceMap": true,
+		"jsx": "react",
+		"declaration": true,
+		"lib": ["es2015","dom"],
+		"esModuleInterop": true
+	},
+	"include": [
+		"./src/*.tsx",
+		"./src/*.ts"
+	],
+		"exclude": [
+		"node_modules"
+	]
+}
