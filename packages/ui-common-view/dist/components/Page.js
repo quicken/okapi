@@ -1,19 +1,4 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -38,37 +23,32 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Page = void 0;
-var React = __importStar(require("react"));
-var Dialog_1 = __importDefault(require("./Dialog"));
-var Page = (function (_super) {
-    __extends(Page, _super);
-    function Page() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Page.prototype.renderActionBar = function () {
+const React = __importStar(require("react"));
+const Dialog_1 = __importDefault(require("./Dialog"));
+class Page extends React.Component {
+    renderActionBar() {
         if (this.props.actionBar) {
             return this.props.actionBar;
         }
-    };
-    Page.prototype.render = function () {
-        var className = "cfkit_react_page" + " " + this.props.layout;
+    }
+    render() {
+        const className = "cfkit_react_page" + " " + this.props.layout;
         return (React.createElement("div", { id: this.props.id, className: className },
             this.renderActionBar(),
             React.createElement("article", null, this.props.children),
             React.createElement(Dialog_1.default, { type: this.props.dialogState.type, signal: this.props.dialogState.signal, msg: this.props.dialogState.msg, isVisible: this.props.dialogState.isVisible, onAction: this.props.handleDialogAction, data: this.props.dialogState.data })));
-    };
-    Page.defaultProps = {
-        layout: "single",
-        dialogState: {
-            type: "alert",
-            signal: "blank",
-            msg: "",
-            isVisible: false,
-            data: undefined,
-        },
-        handleDialogAction: function (name, action, data) { },
-    };
-    return Page;
-}(React.Component));
+    }
+}
 exports.Page = Page;
+Page.defaultProps = {
+    layout: "single",
+    dialogState: {
+        type: "alert",
+        signal: "blank",
+        msg: "",
+        isVisible: false,
+        data: undefined,
+    },
+    handleDialogAction: (name, action, data) => { },
+};
 exports.default = Page;

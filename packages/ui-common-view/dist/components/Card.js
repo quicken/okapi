@@ -1,19 +1,4 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -35,26 +20,21 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Card = void 0;
-var React = __importStar(require("react"));
-var Card = (function (_super) {
-    __extends(Card, _super);
-    function Card() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Card.prototype.renderActionBar = function () {
+const React = __importStar(require("react"));
+class Card extends React.Component {
+    renderActionBar() {
         if (this.props.bar) {
             return this.props.bar;
         }
-    };
-    Card.prototype.render = function () {
-        var className = this.props.className
+    }
+    render() {
+        const className = this.props.className
             ? "cfkit_card" + " " + this.props.className
             : "cfkit_card";
         return (React.createElement("div", { id: this.props.id, className: className },
             React.createElement("div", { className: "cfkit_card_bar" }, this.renderActionBar()),
             React.createElement("div", { className: "cfkit_card_content" }, this.props.children)));
-    };
-    return Card;
-}(React.Component));
+    }
+}
 exports.Card = Card;
 exports.default = Card;

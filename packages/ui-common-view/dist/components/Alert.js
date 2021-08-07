@@ -1,19 +1,4 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -34,23 +19,21 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var React = __importStar(require("react"));
-var Alert = (function (_super) {
-    __extends(Alert, _super);
-    function Alert(props) {
-        var _this = _super.call(this, props) || this;
-        _this.handleKeyBoardEvent = function (e) {
+const React = __importStar(require("react"));
+class Alert extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleKeyBoardEvent = (e) => {
             if (e.key === "Enter") {
                 e.preventDefault();
                 e.stopPropagation();
-                _this.props.onClick();
+                this.props.onClick();
             }
         };
-        return _this;
     }
-    Alert.prototype.componentDidMount = function () { };
-    Alert.prototype.render = function () {
-        var alertClass = "";
+    componentDidMount() { }
+    render() {
+        let alertClass = "";
         switch (this.props.signal) {
             case "blank":
                 alertClass = "alert";
@@ -70,7 +53,6 @@ var Alert = (function (_super) {
                 React.createElement("span", { className: "icon" }),
                 React.createElement("span", { className: "txt" }, this.props.msg)),
             React.createElement("button", { id: "ok_button", onClick: this.props.onClick }, this.props.btnLabel)));
-    };
-    return Alert;
-}(React.Component));
+    }
+}
 exports.default = Alert;

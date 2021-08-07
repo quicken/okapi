@@ -1,19 +1,4 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -34,22 +19,20 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var React = __importStar(require("react"));
-var Confirm = (function (_super) {
-    __extends(Confirm, _super);
-    function Confirm(props) {
-        var _this = _super.call(this, props) || this;
-        _this.handleClickOk = function (e) {
-            _this.props.onAction(_this.props.name, "click_ok", null);
+const React = __importStar(require("react"));
+class Confirm extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleClickOk = (e) => {
+            this.props.onAction(this.props.name, "click_ok", null);
         };
-        _this.handleClickCancel = function (e) {
-            _this.props.onAction(_this.props.name, "click_cancel", null);
+        this.handleClickCancel = (e) => {
+            this.props.onAction(this.props.name, "click_cancel", null);
         };
-        return _this;
     }
-    Confirm.prototype.componentDidMount = function () { };
-    Confirm.prototype.render = function () {
-        var alertClass = "";
+    componentDidMount() { }
+    render() {
+        let alertClass = "";
         switch (this.props.signal) {
             case "blank":
                 alertClass = "alert";
@@ -68,13 +51,12 @@ var Confirm = (function (_super) {
             React.createElement("div", { className: "group" },
                 React.createElement("button", { id: "ok_button", onClick: this.handleClickOk }, this.props.labelOk),
                 React.createElement("button", { onClick: this.handleClickCancel }, this.props.labelCancel))));
-    };
-    Confirm.defaultProps = {
-        name: "confirmDialog",
-        labelOk: "Ok",
-        labelCancel: "Cancel",
-        checked: false,
-    };
-    return Confirm;
-}(React.Component));
+    }
+}
+Confirm.defaultProps = {
+    name: "confirmDialog",
+    labelOk: "Ok",
+    labelCancel: "Cancel",
+    checked: false,
+};
 exports.default = Confirm;

@@ -1,11 +1,10 @@
 import "jsdom-global/register";
-import Enzyme from "enzyme";
-import { mount } from "enzyme";
+import Enzyme, { mount } from "enzyme";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 Enzyme.configure({ adapter: new Adapter() });
 
 import * as React from "react";
-import ActionButton from "../components/ActionButton";
+import { ActionButton } from "../components/ActionButton";
 
 let wrapper: any;
 

@@ -7,10 +7,3 @@
 
 /* Ice Theme */
 @import "./fonts/index.css";
-
-h1 {
-  color: burlywood;
-  font-family: Roboto;
-  font-weight: 300;
-  font-size: 60px;
-}

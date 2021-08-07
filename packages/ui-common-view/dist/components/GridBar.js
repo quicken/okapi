@@ -1,19 +1,4 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -35,53 +20,50 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GridBar = void 0;
-var React = __importStar(require("react"));
-var GridBar = (function (_super) {
-    __extends(GridBar, _super);
-    function GridBar(props) {
-        var _this = _super.call(this, props) || this;
-        _this.handleOnChange = function (name, value, data) {
+const React = __importStar(require("react"));
+class GridBar extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleOnChange = (name, value, data) => {
             switch (name) {
                 case "term":
-                    var DELAY = 100;
-                    if (_this._timer !== null)
-                        clearTimeout(_this._timer);
-                    var fn = function () {
-                        _this.props.handleAction(_this.props.name, "changeTerm", value);
+                    const DELAY = 100;
+                    if (this._timer !== null)
+                        clearTimeout(this._timer);
+                    let fn = () => {
+                        this.props.handleAction(this.props.name, "changeTerm", value);
                     };
-                    _this._timer = setTimeout(fn, DELAY);
+                    this._timer = setTimeout(fn, DELAY);
                     break;
                 case "pageSize":
-                    _this.setState({ pageSize: value });
-                    _this.props.handleAction(_this.props.name, "changePageSize", Number(value));
+                    this.setState({ pageSize: value });
+                    this.props.handleAction(this.props.name, "changePageSize", Number(value));
                     break;
             }
         };
-        _this._timer = null;
-        _this.state = {
+        this._timer = null;
+        this.state = {
             pageSize: 20,
         };
-        return _this;
     }
-    GridBar.prototype.renderPager = function () {
+    renderPager() {
         if (!this.props.showPager)
             return;
         return React.createElement("ul", { className: "grid_pager" });
-    };
-    GridBar.prototype.render = function () {
-        var className = "grid_bar " + this.props.position;
+    }
+    render() {
+        let className = "grid_bar " + this.props.position;
         return (React.createElement("div", { className: className },
             React.createElement("div", { className: "group" }),
             React.createElement("div", { className: "group" })));
-    };
-    GridBar.defaultProps = {
-        name: "gridBar",
-        placeholder: "Enter Search Term",
-        position: "bottom",
-        showPager: true,
-        showAdd: false,
-    };
-    return GridBar;
-}(React.Component));
+    }
+}
 exports.GridBar = GridBar;
+GridBar.defaultProps = {
+    name: "gridBar",
+    placeholder: "Enter Search Term",
+    position: "bottom",
+    showPager: true,
+    showAdd: false,
+};
 exports.default = GridBar;

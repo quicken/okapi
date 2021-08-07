@@ -1,5 +1,4 @@
-import * as React from "react";
-declare class ActionBar extends React.Component {
-    render(): JSX.Element;
-}
-export default ActionBar;
+import React from "react";
+declare type ActionBarProps = {};
+export declare function ActionBar(props: React.PropsWithChildren<ActionBarProps>): JSX.Element;
+export {};

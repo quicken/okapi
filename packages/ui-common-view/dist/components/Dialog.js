@@ -1,19 +1,4 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
@@ -37,26 +22,24 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var React = __importStar(require("react"));
-var Alert_1 = __importDefault(require("./Alert"));
-var Modal_1 = __importDefault(require("./Modal"));
-var Confirm_1 = __importDefault(require("./Confirm"));
-var Dialog = (function (_super) {
-    __extends(Dialog, _super);
-    function Dialog(props) {
-        var _this = _super.call(this, props) || this;
-        _this.handleAction = function (name, action, data) {
-            _this.props.onAction(_this.props.name, action, _this.props.data);
+const React = __importStar(require("react"));
+const Alert_1 = __importDefault(require("./Alert"));
+const Modal_1 = __importDefault(require("./Modal"));
+const Confirm_1 = __importDefault(require("./Confirm"));
+class Dialog extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleAction = (name, action, data) => {
+            this.props.onAction(this.props.name, action, this.props.data);
         };
-        _this.handleAlertClick = function () {
-            _this.handleAction(_this.props.name, "click_ok", null);
+        this.handleAlertClick = () => {
+            this.handleAction(this.props.name, "click_ok", null);
         };
-        _this.state = {
+        this.state = {
             isVisible: false,
         };
-        return _this;
     }
-    Dialog.prototype.renderContent = function () {
+    renderContent() {
         if (this.props.type === "working") {
             return (React.createElement("div", { className: "working" },
                 React.createElement("div", { className: "spinner" }, this.props.msg)));
@@ -65,19 +48,18 @@ var Dialog = (function (_super) {
             return (React.createElement(Alert_1.default, { signal: this.props.signal, msg: this.props.msg, btnLabel: this.props.labelOk, onClick: this.handleAlertClick }));
         }
         return (React.createElement(Confirm_1.default, { signal: this.props.signal, msg: this.props.msg, labelOk: this.props.labelOk, labelCancel: this.props.labelCancel, onAction: this.handleAction }));
-    };
-    Dialog.prototype.render = function () {
+    }
+    render() {
         if (!this.props.isVisible) {
             return React.createElement(React.Fragment, null);
         }
         return React.createElement(Modal_1.default, { className: this.props.type }, this.renderContent());
-    };
-    Dialog.defaultProps = {
-        name: "confirmDialog",
-        labelOk: "Ok",
-        labelCancel: "Cancel",
-        checked: false,
-    };
-    return Dialog;
-}(React.Component));
+    }
+}
+Dialog.defaultProps = {
+    name: "confirmDialog",
+    labelOk: "Ok",
+    labelCancel: "Cancel",
+    checked: false,
+};
 exports.default = Dialog;

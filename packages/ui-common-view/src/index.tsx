@@ -1,1 +1,2 @@
-export { default as Page } from "./components/Page";
+export { Page } from "./components/Page";
+export { NavigationBar } from "./components/NavigationBar";
