@@ -1,5 +1,5 @@
 /* template.css */
-body {
+.body {
   position: relative;
   top: 0;
   left: 0;
@@ -8,8 +8,8 @@ body {
   min-height: 100vh;
 }
 
-body > header,
-body > header > nav,
+.body > header,
+.body > header > nav,
 main,
 footer {
   max-width: 1600px;
@@ -19,18 +19,18 @@ footer {
   box-sizing: border-box;
 }
 
-body > header {
+.body > header {
   max-width: 100%;
   font-size: 14px;
 }
 
-body > main {
+.body > main {
   padding: 15px;
   color: #085392;
   padding-top: 0px;
 }
 
-body > header {
+.body > header {
   position: relative;
   top: 0;
   left: 0;
@@ -40,7 +40,7 @@ body > header {
   background-image: linear-gradient(#0a73aa, #2b66a8);
 }
 
-body > footer {
+.body > footer {
   font-family: helvetica, arial, sans-serif;
 }
 

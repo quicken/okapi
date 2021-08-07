@@ -1,10 +1,24 @@
-import React, { useState } from "react";
-import { NavigationBar } from "@mscherzer/ui-common-view";
+import { NavigationBar, NavGroup, NavItem } from "@mscherzer/ui-common-view";
 
 export function MainNavigation() {
   return (
     <NavigationBar>
-      <ul>
+      <NavGroup title="My Title">
+        <NavItem label="Foo" href=""></NavItem>
+        <NavItem label="Bar" href=""></NavItem>
+        <NavItem label="Cat" href=""></NavItem>
+      </NavGroup>
+      <NavGroup title="My Other Title">
+        <NavItem label="Foo" href=""></NavItem>
+        <NavItem label="Bar" href=""></NavItem>
+        <NavItem label="Cat" href=""></NavItem>
+      </NavGroup>
+    </NavigationBar>
+  );
+}
+
+/*
+ <ul>
         <li id="nav_company">
           <h1>Velomedia Pty. Ltd.</h1>
         </li>
@@ -69,6 +83,4 @@ export function MainNavigation() {
           </ul>
         </li>
       </ul>
-    </NavigationBar>
-  );
-}
+*/
