@@ -1,29 +1,27 @@
 import * as React from "react";
 
 type TileProps = {
-	id?: string;
-	type: "edit" | "delete";
+  id?: string;
+  type: "edit" | "delete";
 };
 
-class Tile extends React.Component<TileProps> {
-	private handleClick = (e: React.MouseEvent) => {
-		e.preventDefault();
-	};
+function Tile(props: React.PropsWithChildren<TileProps>) {
+  if (props.id) {
+    return (
+      <button
+        id={props.id}
+        className={`tile ${props.type}`}
+        onClick={(e: React.MouseEvent<HTMLButtonElement>) => e.preventDefault()}
+      />
+    );
+  }
 
-	public render() {
-		if (this.props.id) {
-			return (
-				<button id={this.props.id} className={`tile ${this.props.type}`} />
-			);
-		}
-
-		return (
-			<button
-				className={`tile ${this.props.type}`}
-				onClick={this.handleClick}
-			/>
-		);
-	}
+  return (
+    <button
+      className={`tile ${props.type}`}
+      onClick={(e: React.MouseEvent<HTMLButtonElement>) => e.preventDefault()}
+    />
+  );
 }
 
 export default Tile;

@@ -1,18 +1,12 @@
 import * as React from "react";
 
 interface ActionBarSpacerProp {
-	type: "spacer" | "seperator";
+  type: "spacer" | "seperator";
 }
 
-class ActionBarSpacer extends React.Component<ActionBarSpacerProp> {
-	static defaultProps = {
-		type: "spacer",
-	};
-
-	render() {
-		const className = this.props.type === "seperator" ? "seperator" : "spacer";
-		return <div className={className}>{this.props.children}</div>;
-	}
+function ActionBarSpacer(props: React.PropsWithChildren<ActionBarSpacerProp>) {
+  const className = props.type === "seperator" ? "seperator" : "spacer";
+  return <div className={className}>{props.children}</div>;
 }
 
 export default ActionBarSpacer;
