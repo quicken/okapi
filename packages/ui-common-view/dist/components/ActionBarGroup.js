@@ -20,9 +20,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const React = __importStar(require("react"));
-class ActionBarGroup extends React.Component {
-    render() {
-        return React.createElement("div", { className: "group" }, this.props.children);
-    }
+function ActionBarGroup(props) {
+    return React.createElement("div", { className: "group" }, props.children);
 }
 exports.default = ActionBarGroup;

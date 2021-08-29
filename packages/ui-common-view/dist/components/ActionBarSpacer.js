@@ -20,13 +20,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const React = __importStar(require("react"));
-class ActionBarSpacer extends React.Component {
-    render() {
-        const className = this.props.type === "seperator" ? "seperator" : "spacer";
-        return React.createElement("div", { className: className }, this.props.children);
-    }
+function ActionBarSpacer(props) {
+    const className = props.type === "seperator" ? "seperator" : "spacer";
+    return React.createElement("div", { className: className }, props.children);
 }
-ActionBarSpacer.defaultProps = {
-    type: "spacer",
-};
 exports.default = ActionBarSpacer;
