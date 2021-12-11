@@ -2131,16 +2131,6 @@
     react-dom "^17.0.2"
     web-vitals "^1.0.1"
 
-"@mscherzer/ui-common-view@^0.0.1":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@mscherzer/ui-common-view/-/ui-common-view-0.0.3.tgz#c9097de1e002794781ad7ff0add2ea5b952e8722"
-  integrity sha512-Gl/RxnYtkPXe4HZmAXLTRurMgveNJ5ea+DmUPvDoBqEHhEmj7ri5LENP8TDLV0RqmDbDGN6pSMfZPnPHOb9fzA==
-  dependencies:
-    "@types/react" "^17.0.2"
-    "@types/react-dom" "^17.0.1"
-    react "^17.0.1"
-    react-dom "^17.0.1"
-
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"

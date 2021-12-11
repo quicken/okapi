@@ -29,17 +29,16 @@ export function NavItem(props: React.PropsWithChildren<NavItemProps>) {
  */
 type NavGroupProps = {
   title: string /* The title for this menu group. */;
-  isActive?: false /* Set to true if the current page is related to this menu group. */;
+  isActive?: boolean /* Set to true if the current page is related to this menu group. */;
   _onClick?: () => void /* A function that is called when the title is clicked. (internal use) */;
-  _expand?: false /* Set to true if this menu group should be expanded. (internal use) */;
+  _expand?: boolean /* Set to true if this menu group should be expanded. (internal use) */;
 };
 
 export function NavGroup(props: React.PropsWithChildren<NavGroupProps>) {
   let className = props.isActive ? "active" : "";
   className = props._expand ? className + " expand" : "";
-
   return (
-    <li className={className} onClick={() => props._onClick()}>
+    <li className={className.trim()} onClick={() => props._onClick()}>
       <span>
         {props.title}
         {props.isActive}
@@ -86,6 +85,10 @@ export function NavigationBar(
 
   let myChildren = React.Children.map(props.children, (child, i) => {
     if (React.isValidElement(child)) {
+      const { name } = child.type as any;
+      /* Only inject props into a NavGroup element.*/
+      if (name !== "NavGroup") return child;
+
       /* Inject new properties into children. */
       return React.cloneElement(child, {
         isActive: activeGroup === i,
