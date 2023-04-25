@@ -1,9 +1,13 @@
 import * as React from "react";
 
-export class Layout extends React.Component {
-	render() {
-		return <div className="cfkit_card_layout">{this.props.children}</div>;
-	}
+interface LayoutProp {
+  children?: React.ReactNode;
+}
+
+export class Layout extends React.Component<LayoutProp> {
+  render() {
+    return <div className="cfkit_card_layout">{this.props.children}</div>;
+  }
 }
 
 export default Layout;

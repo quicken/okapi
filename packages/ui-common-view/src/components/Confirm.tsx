@@ -17,10 +17,6 @@ class Confirm extends React.Component<ConfirmProps, any> {
     checked: false,
   };
 
-  constructor(props: any) {
-    super(props);
-  }
-
   public componentDidMount(): void {}
 
   private handleClickOk = (e: React.MouseEvent): void => {

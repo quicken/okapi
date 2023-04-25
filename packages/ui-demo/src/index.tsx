@@ -1,5 +1,5 @@
-import ReactDOM from "react-dom";
-import { FunctionComponent, useDebugValue } from "react";
+import { createRoot } from "react-dom/client";
+import { FunctionComponent } from "react";
 import { ActionButton } from "@mscherzer/ui-common-form";
 import DatePicker from "@mscherzer/ui-component-datepicker";
 import { Page } from "@mscherzer/ui-common-view";
@@ -94,10 +94,9 @@ let bootstrap = async () => {
     ? (params.get("l") as string)
     : "au"; /* The locale for example. au=Australia, de=Germany*/
 
-  ReactDOM.render(
-    <Application locale={locale}></Application>,
-    document.getElementById("root")
-  );
+  const container = document.getElementById("root");
+  const root = createRoot(container!);
+  root.render(<Application locale={locale}></Application>);
 };
 
 bootstrap();

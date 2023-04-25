@@ -3,7 +3,7 @@ import * as React from "react";
 type ActionButtonProps = {
   type: "empty" | "create" | "save" | "delete" | "search" | "cancel" | "print";
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  children: React.ReactChildren | string;
+  children: React.ReactNode | string;
 };
 
 function ActionButton(props: ActionButtonProps) {

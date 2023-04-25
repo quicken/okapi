@@ -44,7 +44,7 @@ export class Choosen extends React.Component<ChoosenProps, ChoosenState> {
     super(props);
 
     this.state = {
-      edit: this.props.defaultEdit,
+      edit: this.props.defaultEdit || true,
       old_value: this.props.value,
       inputValue: "",
     };
@@ -116,7 +116,7 @@ export class Choosen extends React.Component<ChoosenProps, ChoosenState> {
   /** Render when component is in inline mode and edit mode is false */
   private renderValue = () => {
     const selected = this.props.options.filter(
-      ({ value }) => value === this.props.value
+      ({ value }: any) => value === this.props.value
     );
 
     if ((this.state.edit && !this.props.readOnly) || !this.props.inline) {
@@ -133,7 +133,7 @@ export class Choosen extends React.Component<ChoosenProps, ChoosenState> {
           onChange={this.handleSelectChanged}
           onInputChange={this.handleInputChange}
           placeholder={this.props.placeholder}
-          readOnly={this.props.readOnly}
+          isDisabled={this.props.readOnly}
           classNamePrefix="cfkit"
         />
       );

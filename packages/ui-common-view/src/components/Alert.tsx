@@ -8,10 +8,6 @@ interface AlertProps {
 }
 
 class Alert extends React.Component<AlertProps, any> {
-  constructor(props: any) {
-    super(props);
-  }
-
   public componentDidMount(): void {}
 
   private handleKeyBoardEvent = (e: KeyboardEvent) => {

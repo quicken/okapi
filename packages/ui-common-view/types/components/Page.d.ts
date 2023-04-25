@@ -6,6 +6,7 @@ interface PageProp {
     handleDialogAction: (name: string, action: string, data: any) => void;
     id?: string;
     actionBar?: JSX.Element;
+    children?: React.ReactNode;
 }
 export declare class Page extends React.Component<PageProp> {
     static defaultProps: {
@@ -15,11 +16,11 @@ export declare class Page extends React.Component<PageProp> {
             signal: string;
             msg: string;
             isVisible: boolean;
-            data: any;
+            data: undefined;
         };
         handleDialogAction: (name: string, action: string, data: any) => void;
     };
-    renderActionBar(): JSX.Element;
+    renderActionBar(): JSX.Element | undefined;
     render(): JSX.Element;
 }
 export default Page;

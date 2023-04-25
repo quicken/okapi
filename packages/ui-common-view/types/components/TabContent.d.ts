@@ -3,6 +3,7 @@ interface TabContentProp {
     name: string;
     label: string;
     disabled: boolean;
+    children?: React.ReactNode;
 }
 declare class TabContent extends React.Component<TabContentProp> {
     static defaultProps: {

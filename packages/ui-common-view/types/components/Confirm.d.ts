@@ -14,7 +14,6 @@ declare class Confirm extends React.Component<ConfirmProps, any> {
         labelCancel: string;
         checked: boolean;
     };
-    constructor(props: any);
     componentDidMount(): void;
     private handleClickOk;
     private handleClickCancel;

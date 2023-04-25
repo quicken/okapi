@@ -3,6 +3,7 @@ interface TabContainerProp {
     name: string;
     defaultActiveTab: number;
     onAction?: (name: string, value: any, data: any) => void;
+    children?: React.ReactNode;
 }
 interface TabContainerState {
     activeTab: number;
@@ -14,7 +15,7 @@ declare class TabContainer extends React.Component<TabContainerProp, TabContaine
     constructor(props: TabContainerProp);
     private handleClickTab;
     private renderTabs;
-    renderTabContent(): React.ReactChild | React.ReactFragment | React.ReactPortal;
+    renderTabContent(): string | number | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | undefined;
     render(): JSX.Element;
 }
 export default TabContainer;

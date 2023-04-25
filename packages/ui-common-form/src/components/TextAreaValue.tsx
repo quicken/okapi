@@ -52,14 +52,14 @@ class TextAreaValue extends React.Component<
 
     if (this.state.edit) {
       if (this._input) {
-        this._old_value = this._input!.value;
+        this._old_value = this._input.value;
 
-        this._input!.focus();
+        this._input.focus();
 
         /* Position cursor at end of content. */
-        this._input!.setSelectionRange(
-          this._input!.value.length,
-          this._input!.value.length
+        this._input.setSelectionRange(
+          this._input.value.length,
+          this._input.value.length
         );
       }
 
@@ -77,29 +77,30 @@ class TextAreaValue extends React.Component<
       this._input!.focus();
 
       /* Resize textarea to fit content. */
-      this._input.style.height = "";
-      this._input.style.height = this._input.scrollHeight + 5 + "px";
+      if (this._input) {
+        this._input.style.height = "";
+        this._input.style.height = this._input.scrollHeight + 5 + "px";
 
-      /* Position cursor at end of content. */
-      this._input!.setSelectionRange(
-        this._input!.value.length,
-        this._input!.value.length
-      );
+        /* Position cursor at end of content. */
+        this._input.setSelectionRange(
+          this._input.value.length,
+          this._input.value.length
+        );
+
+        this._old_value = this._input.value;
+      }
 
       this._discard = false;
-      this._old_value = this._input!.value;
     }
   }
 
   private onKeyUp = (e: React.KeyboardEvent) => {
-    const ENTER = 13;
-    const ESCAPE = 27;
-    switch (e.keyCode) {
-      case ENTER:
+    switch (e.key) {
+      case "Enter":
         if (e.shiftKey || e.altKey || e.ctrlKey) return;
         this._input!.blur();
         break;
-      case ESCAPE: {
+      case "Escape": {
         this._discard = true;
         this._input!.blur();
         break;
@@ -110,8 +111,10 @@ class TextAreaValue extends React.Component<
 
   private handleInput = (e: React.FormEvent<HTMLTextAreaElement>) => {
     /* Resize text are to suit content. */
-    this._input.style.height = "";
-    this._input.style.height = this._input.scrollHeight + "px";
+    if (this._input) {
+      this._input.style.height = "";
+      this._input.style.height = this._input.scrollHeight + "px";
+    }
   };
 
   private onClick = (e: React.MouseEvent) => {

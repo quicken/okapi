@@ -34,6 +34,7 @@ interface FieldInputProps {
   mask?: boolean;
   /** This should be set to the true for fields that should not set form to dirty - logins etc. */
   preventDirty?: boolean;
+  children?: React.ReactNode | string;
 }
 
 interface FieldInputState {

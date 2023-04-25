@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import ActionButton from "../components/ActionButton";
+import { ActionButton } from "@mscherzer/ui-common-form";
 
 test("renders learn react link", () => {
   render(

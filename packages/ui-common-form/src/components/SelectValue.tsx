@@ -34,7 +34,7 @@ export class InputSelect extends React.Component<
     super(props);
 
     this.state = {
-      edit: this.props.defaultEdit,
+      edit: this.props.defaultEdit || true,
       old_value: this.props.value,
     };
   }
@@ -75,7 +75,7 @@ export class InputSelect extends React.Component<
   /** Render when component is in inline mode and edit mode is false */
   private renderValue = () => {
     const selected = this.props.options.filter(
-      ({ value }) => value === this.props.value
+      ({ value }: any) => value === this.props.value
     );
 
     if (this.state.edit || !this.props.inline) {

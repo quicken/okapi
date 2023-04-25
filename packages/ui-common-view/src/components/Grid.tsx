@@ -1,21 +1,22 @@
 import * as React from "react";
 
 interface GridProp {
-	id?: string;
-	className?: string;
+  id?: string;
+  className?: string;
+  children?: React.ReactNode;
 }
 
 export class Grid extends React.Component<GridProp> {
-	render() {
-		const className = this.props.className
-			? "grid" + " " + this.props.className
-			: "cfkit_card";
-		return (
-			<div id={this.props.id} className={className}>
-				<table className="grid">{this.props.children}</table>
-			</div>
-		);
-	}
+  render() {
+    const className = this.props.className
+      ? "grid" + " " + this.props.className
+      : "cfkit_card";
+    return (
+      <div id={this.props.id} className={className}>
+        <table className="grid">{this.props.children}</table>
+      </div>
+    );
+  }
 }
 
 export default Grid;

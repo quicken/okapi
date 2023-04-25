@@ -4,6 +4,7 @@ interface TabContentProp {
   name: string;
   label: string;
   disabled: boolean;
+  children?: React.ReactNode;
 }
 
 class TabContent extends React.Component<TabContentProp> {

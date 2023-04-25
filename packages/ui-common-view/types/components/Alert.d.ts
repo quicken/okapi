@@ -6,7 +6,6 @@ interface AlertProps {
     onClick: () => void;
 }
 declare class Alert extends React.Component<AlertProps, any> {
-    constructor(props: any);
     componentDidMount(): void;
     private handleKeyBoardEvent;
     render(): JSX.Element;

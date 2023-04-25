@@ -4,6 +4,7 @@ interface TabContainerProp {
   name: string;
   defaultActiveTab: number;
   onAction?: (name: string, value: any, data: any) => void;
+  children?: React.ReactNode;
 }
 
 interface TabContainerState {

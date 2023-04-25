@@ -1,21 +1,22 @@
 {
-	"compilerOptions": {
-		"outDir": "./dist",
-		"target": "es2017",
-		"module": "commonjs",
-		"noImplicitAny": false,
-		"removeComments": true,
-		"sourceMap": false,
-		"jsx": "react",
-		"declaration": true,
-		"lib": ["es2015","dom"],
-		"esModuleInterop": true
-	},
-	"include": [
-		"./src/*.tsx",
-		"./src/*.ts"
-	],
-		"exclude": [
-		"node_modules"
-	]
+  "compilerOptions": {
+    // Default
+    "target": "es5",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+
+    // Added
+    "jsx": "react",
+    "module": "ESNext",
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "removeComments": true
+  },
+  "exclude": ["node_modules", "dist"]
 }

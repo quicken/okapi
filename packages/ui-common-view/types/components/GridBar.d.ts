@@ -25,7 +25,7 @@ export declare class GridBar extends React.Component<GridBarProps, GridBarState>
     private _timer;
     constructor(props: GridBarProps);
     private handleOnChange;
-    renderPager(): JSX.Element;
+    renderPager(): JSX.Element | undefined;
     render(): JSX.Element;
 }
 export default GridBar;

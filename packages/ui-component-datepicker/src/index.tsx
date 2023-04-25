@@ -21,6 +21,7 @@ interface DatePickerProps {
   readOnly?: boolean;
   /** The text label that is to be shown for the field. An empty or undefined label prevents the lablel HTML from being rendered. */
   label?: string;
+  children?: React.ReactNode;
 }
 
 interface DatePickerState {
@@ -90,18 +91,10 @@ class DateField extends React.Component<DatePickerProps, DatePickerState> {
   };
 
   private fieldChanged = (value: Date) => {
-    const float_utc = new Date();
-    float_utc.setUTCFullYear(value.getFullYear());
-    float_utc.setUTCMonth(value.getMonth());
-    float_utc.setUTCDate(value.getDate());
-    float_utc.setUTCHours(value.getHours());
-    float_utc.setUTCMinutes(value.getMinutes());
-    float_utc.setUTCSeconds(value.getSeconds());
-    float_utc.setUTCMilliseconds(0);
-    this.setState({ ...this.state, value: float_utc });
+    this.setState({ ...this.state, value: value });
     /* NON inline mode call updates as field is changed.*/
     if (!this.props.inline) {
-      this.props.onChange(this.props.name, float_utc);
+      this.props.onChange(this.props.name, value);
     }
   };
 
@@ -114,16 +107,7 @@ class DateField extends React.Component<DatePickerProps, DatePickerState> {
   }
 
   private getLocalDate(): Date {
-    let v = this.state.value;
-    const locale = new Date();
-    locale.setFullYear(v.getUTCFullYear());
-    locale.setMonth(v.getUTCMonth());
-    locale.setDate(v.getUTCDate());
-    locale.setHours(v.getUTCHours());
-    locale.setMinutes(v.getUTCMinutes());
-    locale.setSeconds(v.getUTCSeconds());
-    locale.setMilliseconds(0);
-    return locale;
+    return this.state.value;
   }
 
   private renderLabel() {

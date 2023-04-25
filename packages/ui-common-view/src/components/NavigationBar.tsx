@@ -37,8 +37,9 @@ type NavGroupProps = {
 export function NavGroup(props: React.PropsWithChildren<NavGroupProps>) {
   let className = props.isActive ? "active" : "";
   className = props._expand ? className + " expand" : "";
+  const onClick = props._onClick ? props._onClick : () => {};
   return (
-    <li className={className.trim()} onClick={() => props._onClick()}>
+    <li className={className.trim()} onClick={onClick}>
       <span>
         {props.title}
         {props.isActive}
@@ -90,11 +91,12 @@ export function NavigationBar(
       if (name !== "NavGroup") return child;
 
       /* Inject new properties into children. */
-      return React.cloneElement(child, {
+      const args = {
         isActive: activeGroup === i,
         _expand: expandedGroup === i,
         _onClick: () => setExpandedGroup(i),
-      });
+      };
+      return React.cloneElement(child, args);
     } else {
       return child;
     }
