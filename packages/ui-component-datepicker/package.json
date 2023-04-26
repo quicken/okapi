@@ -16,7 +16,7 @@
   "keywords": [
     "UX-Design"
   ],
-  "version": "0.0.6",
+  "version": "0.0.7",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
